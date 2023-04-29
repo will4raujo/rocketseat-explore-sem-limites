@@ -1,0 +1,489 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --primary-color: hsla(320, 69%, 42%, 1);
+    --secondary-color: hsla(244, 38%, 28%, 1);
+    --bg-color-one: #F9F4FB;
+    --bg-color-two: linear-gradient(96.21deg, #343193 0%, #302C63 99.68%);
+
+}
+
+body {
+    font-family: 'Mulish';
+    font-size: 1.6rem;
+    color: var(--secondary-color);
+    margin: 0 auto;
+    background-color: var(--bg-color-one);
+}
+
+h1, h2, legend {
+    color: var(--primary-color);
+    font-weight: 900;
+}
+
+.main-texts{
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3rem;
+    gap: 5rem;
+
+}
+
+.astronault{
+    width: 36.4rem;
+    height: 37rem;
+    background: url(../img/mobile-astronault.png);
+    background-repeat: no-repeat;
+    background-position: 100%;
+    background-position: center;
+}
+
+.container-texts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50vh;
+}
+
+.texts {
+    animation: leftcenter 3s;
+}
+
+.texts h1 {
+    font-size: 3.2rem;
+    line-height: 4rem;
+    animation: balance 15s cubic-bezier(0,0,0,0) infinite;
+}
+
+.texts p { 
+    font-size: 2rem;
+    line-height: 2.5rem;
+    font-weight: 600;
+}
+
+.icon-direction img {
+    animation: topdown 3s;
+    padding-bottom: 9.3rem;
+    cursor: pointer;
+}
+
+.containers {
+    background: var(--bg-color-two);
+    padding: 5.5rem 4rem ;
+    display: flex;
+    flex-direction: column;
+    gap: 5.5rem;
+ }
+
+.containers div {
+    background-color: var(--bg-color-one);
+    border-radius: 2rem;
+    padding: 2.6rem;
+}
+
+.containers h2 { 
+   font-size: 3rem;
+   line-height: 3.7rem;
+   margin: 3.3rem 0 2rem 0;
+}
+
+.containers p {
+    width: 26.5rem;
+}
+
+form{
+    padding: 7.8rem 4rem 6.5rem;
+}
+
+fieldset { 
+    border: none;
+}
+
+.fieldset-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    
+}
+
+.fieldset-wrapper legend {
+    font-size: 3.2rem;
+}
+
+
+
+input, textarea {
+    border-radius: 1.6rem;
+}
+
+input:focus {
+    border: var(--primary-color) solid 1px;
+}
+
+
+input::placeholder, textarea::placeholder {
+    color: var(--secondary-color);
+}
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+#input-name, #input-email {
+    animation: none;
+}
+
+.input-wrapper img {
+    position: absolute;
+    top: 1.3rem;
+    left: 1.6rem;
+}
+
+
+.input-wrapper input {
+    height: 4.8rem;
+    padding-left: 5rem;
+    font-size: 1.6rem;
+    color: var(--secondary-color);
+    border: var(--secondary-color) solid 1.5px;
+}
+
+textarea {
+    resize: none;
+    height: 12.6rem;
+    padding: 1.2rem 1.6rem 1.6rem;
+    font-family: 'Mulish';
+    font-size: 1.6rem;
+    margin-bottom: 2.4rem;
+    border: solid 1.5px var(--secondary-color);
+}
+
+button {
+    padding: 1.6rem;
+    background: var(--bg-color-two);
+    border-radius: 1.6rem;
+    color: var(--bg-color-one);
+    border: none;
+    cursor: pointer;
+    transition: .1s;
+}
+
+button:hover {
+    color: var(--bg-color-one);
+    background: var(--primary-color);
+
+}
+
+footer {
+    height: 7.8rem;
+    background: var(--bg-color-two);
+    text-align: center;
+    color: var(--bg-color-one);
+    padding: 3.2rem 1.6rem;
+}
+
+.containers div img {
+    animation: roll-moon 15s cubic-bezier(0, 0, 0, 0) infinite;
+}
+
+/*animações*/
+@keyframes roll-moon {
+    0% {
+        transform: 
+         rotate(0deg)
+         translateY(0px);
+    }
+
+    50% {
+        transform: 
+         rotate(180deg)
+         translateY(20px);
+    }
+
+    100%{
+        transform: 
+            rotate(360deg)
+            translateY(0px);
+    }
+
+}
+
+@keyframes balance {
+    0%{ 
+        transform: 
+            translateY(0px)
+            translateX(0px);
+    }
+    
+    25%{
+        transform: 
+            translateY(2px)
+            translateX(-2px);
+    }
+
+    50%{
+        transform: 
+            translateY(0px)
+            translateX(2px);
+    }
+    
+    75%{
+        transform: 
+            translateY(-2px)
+            translateX(-2px);
+    }
+
+    100%{
+        transform: 
+        translateY(0px)
+        translateX(0px)s;
+    }
+}
+
+@keyframes shake {
+    0%{
+        transform: 
+            translateX(5px);
+    }
+
+    25%{
+        transform: 
+        translateX(-5px);
+    }
+
+    50%{
+        transform: 
+        translateX(5px);
+    }
+
+    75%{
+        transform: 
+        translateX(-5px);
+    }
+
+    100%{
+        transform: 
+        translateX(0px);
+    }
+}
+
+@keyframes topdown {
+    0% {
+        transform: 
+         translateY(0);
+    }
+
+    50% {
+        transform: 
+         translateY(7rem);
+    }
+
+}
+
+@keyframes leftcenter {
+    0%{
+        transform: translateX(-60rem);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateX(0rem);
+        opacity: 1;
+    }
+}
+
+@media (min-width: 431px) {
+
+    .pages {
+        margin: 0 auto;
+    }
+
+    .main-texts{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        align-items: stretch;
+        position: relative;
+        
+    }
+    
+    .astronault{
+        width: 72rem;
+        height: 74rem;
+        background: url(../img/desktop-astronault.png);
+        background-repeat: no-repeat;
+        background-position: 100%;
+        background-position: top;
+        position: absolute;
+        z-index: 1;
+        right: 11rem;
+    }
+
+    .container-texts {
+        align-items: baseline;
+        justify-content: center;
+        min-height: 100vh;
+        gap: 20rem;
+        position: absolute;
+        z-index: 2;
+        left: 5rem;
+    }
+
+    .texts { 
+        padding-top: 20rem;
+        
+    }
+    
+    .texts h1{
+        font-size: 5.8rem;
+        margin-bottom: 1rem;
+        position: relative;
+        z-index: 2;
+    }
+
+    .texts p {
+        font-size: 3.2rem;
+        text-align: left;
+    }
+
+    .icon-direction img {
+        padding: 0;
+    }
+
+    .containers {
+        flex-direction: row;
+        height: 57.6rem;
+        justify-content: space-around;
+        padding: 3.2rem  1.3rem 7.2rem 3.2rem;
+    }
+
+    .containers div {
+        width: 36.6rem;
+        height: 44.8rem;
+    }
+
+    .containers h2 {
+        font-size: 3.5rem;
+    }
+
+    .containers p {
+        font-size: 2rem;
+        width: 32rem;
+    }
+
+    form{
+        padding: 7.8rem 4rem 6.5rem;
+        background: url(../img/stars-bg.svg);
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: 50%;
+    }
+    
+    fieldset { 
+        border: none;
+        width: 45%;
+    }
+    
+    .fieldset-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+        
+    }
+    
+    .fieldset-wrapper legend {
+        font-size: 3.2rem;
+    }
+    
+    
+    
+    input, textarea {
+        border-radius: 1.6rem;
+    }
+    
+    input:focus {
+        border: var(--primary-color) solid 1px;
+    }
+    
+    
+    input::placeholder, textarea::placeholder {
+        color: var(--secondary-color);
+    }
+    
+    .input-wrapper {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    
+    #input-name, #input-email {
+        animation: none;
+    }
+    
+    .input-wrapper img {
+        position: absolute;
+        top: 1.3rem;
+        left: 1.6rem;
+    }
+    
+    
+    .input-wrapper input {
+        height: 4.8rem;
+        padding-left: 5rem;
+        font-size: 1.6rem;
+        color: var(--secondary-color);
+        border: var(--secondary-color) solid 1.5px;
+    }
+    
+    textarea {
+        resize: none;
+        height: 12.6rem;
+        padding: 1.2rem 1.6rem 1.6rem;
+        font-family: 'Mulish';
+        font-size: 1.6rem;
+        margin-bottom: 2.4rem;
+        border: solid 1.5px var(--secondary-color);
+    }
+    
+    button {
+        padding: 1.6rem;
+        background: var(--bg-color-two);
+        border-radius: 1.6rem;
+        color: var(--bg-color-one);
+        border: none;
+        cursor: pointer;
+        transition: .1s;
+    }
+    
+    button:hover {
+        color: var(--bg-color-one);
+        background: var(--primary-color);
+    
+    }
+    
+    footer {
+        height: 7.8rem;
+        background: var(--bg-color-two);
+        text-align: center;
+        color: var(--bg-color-one);
+        padding: 3.2rem 1.6rem;
+    }
+    
+    .containers div img {
+        animation: roll-moon 15s cubic-bezier(0, 0, 0, 0) infinite;
+    }
+
+
+}
